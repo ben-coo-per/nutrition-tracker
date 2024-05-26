@@ -1,4 +1,4 @@
-NUTRITION_IDENTIFIERS = [
+_NUTRITION_IDENTIFIERS = [
     {"identifier": "EnergyConsumed", "description": "A quantity sample type that measures the amount of energy consumed.", "unit": "kcal"},
     {"identifier": "FatTotal", "description": "A quantity sample type that measures the total amount of fat consumed.", "unit": "g"},
     {"identifier": "Protein", "description": "A quantity sample type that measures the amount of protein consumed.",  "unit": "g"},
@@ -39,3 +39,6 @@ NUTRITION_IDENTIFIERS = [
 
 # Macros that you want returned from the nutrition estimation machine every time
 IMPORTANT_MACROS = ["EnergyConsumed", "FatTotal", "Carbohydrates", "Protein"]
+
+# The nutrition identifiers that are currently supported by the logging shortcut
+SUPPORTED_IDENTIFIERS = filter(lambda x: x["identifier"] in IMPORTANT_MACROS, _NUTRITION_IDENTIFIERS)
