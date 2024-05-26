@@ -1,19 +1,17 @@
 _NUTRITION_IDENTIFIERS = [
     {"identifier": "EnergyConsumed", "description": "A quantity sample type that measures the amount of energy consumed.", "unit": "kcal"},
     {"identifier": "FatTotal", "description": "A quantity sample type that measures the total amount of fat consumed.", "unit": "g"},
-    {"identifier": "Protein", "description": "A quantity sample type that measures the amount of protein consumed.",  "unit": "g"},
     {"identifier": "Carbohydrates", "description": "A quantity sample type that measures the amount of carbohydrates consumed.", "unit": "g"},
-    {"identifier": "FatSaturated", "description": "A quantity sample type that measures the amount of saturated fat consumed."},
-    {"identifier": "Cholesterol", "description": "A quantity sample type that measures the amount of cholesterol consumed."},
-    {"identifier": "Sodium", "description": "A quantity sample type that measures the amount of sodium consumed."},
+    {"identifier": "Protein", "description": "A quantity sample type that measures the amount of protein consumed.",  "unit": "g"},
+    {"identifier": "FatSaturated", "description": "A quantity sample type that measures the amount of saturated fat consumed.", "unit": "g"},
+    {"identifier": "Cholesterol", "description": "A quantity sample type that measures the amount of cholesterol consumed.", "unit": "g"},
+    {"identifier": "Sodium", "description": "A quantity sample type that measures the amount of sodium consumed.", "unit": "mg"},
     {"identifier": "Fiber", "description": "A quantity sample type that measures the amount of fiber consumed."},
     {"identifier": "Sugar", "description": "A quantity sample type that measures the amount of sugar consumed."},
     {"identifier": "VitaminA", "description": "A quantity sample type that measures the amount of vitamin A consumed."},
     {"identifier": "VitaminC", "description": "A quantity sample type that measures the amount of vitamin C consumed."},
     {"identifier": "Calcium", "description": "A quantity sample type that measures the amount of calcium consumed."},
     {"identifier": "Iron", "description": "A quantity sample type that measures the amount of iron consumed."},
-    {"identifier": "Water", "description": "A quantity sample type that measures the amount of water consumed."},
-    {"identifier": "Caffeine", "description": "A quantity sample type that measures the amount of caffeine consumed."},
     {"identifier": "Folate", "description": "A quantity sample type that measures the amount of folate consumed."},
     {"identifier": "Potassium", "description": "A quantity sample type that measures the amount of potassium consumed."},
     {"identifier": "VitaminB12", "description": "A quantity sample type that measures the amount of vitamin B12 consumed."},
@@ -41,4 +39,5 @@ _NUTRITION_IDENTIFIERS = [
 IMPORTANT_MACROS = ["EnergyConsumed", "FatTotal", "Carbohydrates", "Protein"]
 
 # The nutrition identifiers that are currently supported by the logging shortcut
-SUPPORTED_IDENTIFIERS = filter(lambda x: x["identifier"] in IMPORTANT_MACROS, _NUTRITION_IDENTIFIERS)
+SUPPORTED_IDENTIFIERS = IMPORTANT_MACROS + ["FatSaturated", "Cholesterol", "Sodium"]
+NUTRITION_IDENTIFIERS = filter(lambda x: x["identifier"] in SUPPORTED_IDENTIFIERS, _NUTRITION_IDENTIFIERS)
