@@ -1,6 +1,7 @@
-# FastAPI server
+# Apple Health GPT-4 Nutrition Tracker Shortcut
+Quick project that uses Apple Shortcuts to log an estimate of the macros in a description of food. I find this extremely lightweight approach to be much more intuitive than using a 3rd party app to handle logging or, god forbid, logging it manually. If you have an Iphone and want to get your own version up and running, it's quite simple to set up (I'd estimate no more than 15min if you aren't familiar with Apple Shortcuts, less if you are).
+[server based on fast api railway starter template](https://github.com/railwayapp-templates/fastapi/)
 
-[based on fast api railway starter template](https://github.com/railwayapp-templates/fastapi/)
 
 ## 🥞Stack
 
